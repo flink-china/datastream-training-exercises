@@ -66,7 +66,6 @@ public class LongRideTaxi {
 
 		@Override
 		public void processElement(TaxiRide ride, Context context, Collector<TaxiRide> out) throws Exception {
-			out.collect(ride);
 		}
 
 		@Override

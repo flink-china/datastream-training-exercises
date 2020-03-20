@@ -46,7 +46,6 @@ public class WordCount {
 		DataStream<String> words2 = env.addSource(new ContinuousGeneratingWordsSource());
 
 		// TODO: implement your own word count of the above inputs
-		words1.connect(words2).flatMap(new Tokenizer()).keyBy(0).sum(1).addSink(new LogSink());
 
 		// execute program
 		env.execute("Two Streaming WordCount");
